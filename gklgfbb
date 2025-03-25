@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clone and optimize videos easily with our dynamic video clone tool. SEO-optimized with AdSense integration for monetization.">
+    <title>Video Clone Tool</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        input {
+            padding: 12px;
+            margin: 10px 0;
+            width: 90%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        button {
+            padding: 12px 20px;
+            margin: 10px 0;
+            width: 95%;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff3e30;
+        }
+        video {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .ads-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Video Clone Tool 🎥</h1>
+        <input type="text" id="videoUrl" placeholder="Paste video link here...">
+        <button onclick="cloneVideo()">Clone Video</button>
+        <div class="ads-container">
+            <!-- Google AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="YOUR-ADSENSE-ID"
+                data-ad-slot="YOUR-AD-UNIT-ID"
+                data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <video id="clonedVideo" controls></video>
+    </div>
+
+    <script>
+        function cloneVideo() {
+            let videoUrl = document.getElementById("videoUrl").value;
+            let videoElement = document.getElementById("clonedVideo");
+            if (videoUrl) {
+                videoElement.src = videoUrl;
+                videoElement.play();
+            } else {
+                alert("Please enter a valid video URL.");
+            }
+        }
+    </script>
+</body>
+</html>
